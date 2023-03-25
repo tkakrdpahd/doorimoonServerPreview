@@ -1,0 +1,53 @@
+combined_nas RedHat Linux (/root)/ # root domain (doorimoon.com & doorimoon.kr)
+    ├── webserver/ # ILS Server & FTP Server; 16800, 80 & 8080
+    │       ├── public_html/ # ILS Server & FTP Server; 16800, 80 & 8080
+    │       │   ├── index.html # FTP Server; 80 & 8080
+    │       │   ├── pages/ # ILS Server; 16800
+    │       │   ├── css/ # ILS Server; 16800
+    │       │   └── js/ # ILS Server; 16800
+    │       └── logs/ # ILS Server; 16800
+    │           ├── access.log
+    │           └── error.log
+    ├── internal_nas/ # Internal NAS Server & Perforce Source Control; 18800, 1666
+    │       ├── images/ # Internal NAS Server; 18800
+    │       │   └── user_id/
+    │       ├── videos/ # Internal NAS Server; 18800
+    │       │   └── user_id/
+    │       ├── logs/ # Internal NAS Server; 18800
+    │       └── depot/ # Perforce Source Control; 1666
+    │           ├── Project/
+    │           │   └── Contents/
+    │           └── log/
+    ├── mail_nas/ # FTP Server, Mail Server, Mail NAS Server; 80 & 8080, 24 & 25, 17800
+    │   ├── webmail_server/ # FTP Server, NAS Server; 80 & 8080, 17800
+    │   │   ├── public_html/ # FTP Server; 80 & 8080
+    │   │   └── logs/ # Mail NAS Server; 17800
+    │   └── mail_nas_server/ # Mail NAS Server; 17800
+    │       ├── mailboxes/
+    │       ├── logs/
+    │       └── backups/
+    ├── logs/ # Internal NAS Server; 18800
+    │   ├── access.log
+    │   └── error.log
+    └── mysql_nas/ # mySQL server; 13888
+        ├── webserver_db/
+        │   ├── users/
+        │   └── pages/
+        ├── internal_db/
+        │   ├── images/
+        │   ├── videos/
+        │   └── depot/
+        └── mail_nas_db/
+            ├── users/
+            └── mailboxes/
+                ├── messages/
+                ├── folders/
+                └── attachments/
+
+Mail Server: Ports 24 and 25.
+FTP Server; 80 & 8080
+Perforce Source Control; 1666
+mySQL server; 13888
+ILS Server; 16800
+Mail NAS Server; 17800
+Internal NAS Server; 18800

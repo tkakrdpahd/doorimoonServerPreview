@@ -1,0 +1,14 @@
+    └── mysql_nas/ # mySQL server; 13888
+        ├── webserver_db/
+        │   ├── users/
+        │   └── pages/
+        ├── internal_db/
+        │   ├── images/
+        │   ├── videos/
+        │   └── depot/
+        └── mail_nas_db/
+            ├── users/
+            └── mailboxes/
+                ├── messages/
+                ├── folders/
+                └── attachments/
