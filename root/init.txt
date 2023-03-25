@@ -32,6 +32,7 @@ combined_nas RedHat Linux (/root)/ # root domain (doorimoon.com & doorimoon.kr)
     │   │   └── logs/ # Mail NAS Server; 17800
     │   └── mail_nas_server/ # Mail NAS Server; 17800
     │       ├── mailboxes/
+    │       │   └── user/
     │       ├── logs/
     │       └── backups/
     ├── logs/ # Internal NAS Server; 18800
