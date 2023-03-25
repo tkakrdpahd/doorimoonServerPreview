@@ -1,23 +1,28 @@
-combined_nas/ RedHat Linux
-├── webserver/
-│   ├── public_html/
-│   │   ├── index.html
-│   │   ├── pages/
-│   │   ├── css/
-│   │   └── js/
+combined_nas/ (RedHat Linux)
+├── webserver/ # ILS Server; 16800
+│   ├── public_html/ (ILS & FTP)
+│   │   ├── index.html # FTP Server 80 & 8080
+│   │   ├── pages/ # ILS Server; 16800
+│   │   ├── css/ # ILS Server; 16800
+│   │   └── js/ # ILS Server; 16800
 │   └── logs/
 │       ├── access.log
 │       └── error.log
-├── internal/
-│   ├── images/
-│   ├── videos/
+├── internal/ # Internal NAS Server; 18800
+│   ├── images/ # Web mail images, personal cloud image files
+│   │   └──  user_id/
+│   ├── videos/ # Web mail images, personal cloud image files
+│   │   └──  user_id/
 │   ├── logs/
-│   └── Depot/
-├── mail_nas/
-│   ├── webmail_server/
+│   └── Depot/ # Perforce Source Control; 1666
+│       ├── Project/ # Game engine project files, such as .uproject
+│       │   └── Contents # FBX, OBJ, MP4, WAV, etc. in use
+│       └── log/
+├── mail_nas/ # Mail NAS Server; 17800
+│   ├── webmail_server/ # FTP Server 80 & 8080
 │   │   ├── public_html/
 │   │   └── logs/
-│   └── mail_nas_server/
+│   └── mail_nas_server/ # Mail NAS Server; 17800
 │       ├── mailboxes/
 │       ├── logs/
 │       └── backups/
@@ -25,6 +30,9 @@ combined_nas/ RedHat Linux
     ├── access.log
     └── error.log
 
+Mail Server: Ports 24 and 25.
+FTP Server; 80 & 8080
+Perforce Source Control; 1666
 ILS Server; 16800
 Mail NAS Server; 17800
 Internal NAS Server; 18800
