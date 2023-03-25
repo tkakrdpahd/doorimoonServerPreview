@@ -1,92 +1,53 @@
-combined_nas/ (RedHat Linux)
-├── webserver/ # ILS Server; 16800
-│   ├── public_html/ (ILS & FTP)
-│   │   ├── index.html # FTP Server 80 & 8080
-│   │   ├── pages/ # ILS Server; 16800
-│   │   ├── css/ # ILS Server; 16800
-│   │   └── js/ # ILS Server; 16800
-│   └── logs/
-│       ├── access.log
-│       └── error.log
-├── internal/ # Internal NAS Server; 18800
-│   ├── images/ # Web mail images, personal cloud image files
-│   │   └──  user_id/
-│   ├── videos/ # Web mail images, personal cloud image files
-│   │   └──  user_id/
-│   ├── logs/
-│   └── Depot/ # Perforce Source Control; 1666
-│       ├── Project/ # Game engine project files, such as .uproject
-│       │   └── Contents # FBX, OBJ, MP4, WAV, etc. in use
-│       └── log/
-├── mail_nas/ # Mail NAS Server; 17800
-│   ├── webmail_server/ # FTP Server 80 & 8080
-│   │   ├── public_html/
-│   │   └── logs/
-│   └── mail_nas_server/ # Mail NAS Server; 17800
-│       ├── mailboxes/
-│       ├── logs/
-│       └── backups/
-└── logs/
-    ├── access.log
-    └── error.log
+combined_nas/
+    ├── webserver/
+    │       ├── public_html/
+    │       │   ├── index.html
+    │       │   ├── pages/
+    │       │   ├── css/
+    │       │   └── js/
+    │       └── logs/
+    │           ├── access.log
+    │           └── error.log
+    ├── internal/
+    │       ├── images/
+    │       │   └── user_id/
+    │       ├── videos/
+    │       │   └── user_id/
+    │       ├── logs/
+    │       └── depot/
+    │           ├── Project/
+    │           │   └── Contents/
+    │           └── log/
+    ├── mail_nas/
+    │       ├── webmail_server/
+    │       │   ├── public_html/
+    │       │   └── logs/
+    │       └── mail_nas_server/
+    │           ├── mailboxes/
+    │           ├── logs/
+    │           └── backups/
+    ├── logs/
+    │   ├── access.log
+    │   └── error.log
+    └── mysql_nas/
+        ├── webserver_db/
+        │   ├── users/
+        │   └── pages/
+        ├── internal_db/
+        │   ├── images/
+        │   ├── videos/
+        │   └── depot/
+        └── mail_nas_db/
+            ├── users/
+            └── mailboxes/
+                ├── messages/
+                ├── folders/
+                └── attachments/
 
 Mail Server: Ports 24 and 25.
 FTP Server; 80 & 8080
 Perforce Source Control; 1666
+mySQL server; 13888
 ILS Server; 16800
 Mail NAS Server; 17800
 Internal NAS Server; 18800
-
-mysql_nas/
-├── webserver_db
-│   ├── users
-│   │   ├── id (PK)
-│   │   ├── username
-│   │   ├── password
-│   │   └── email
-│   └── pages
-│       ├── id (PK)
-│       ├── title
-│       ├── content
-│       └── user_id (FK)
-├── internal_db
-│   ├── images
-│   │   ├── id (PK)
-│   │   ├── image_name
-│   │   ├── image_path
-│   │   └── user_id (FK)
-│   ├── videos
-│   │   ├── id (PK)
-│   │   ├── video_name
-│   │   ├── video_path
-│   │   └── user_id (FK)
-│   └── depot
-│       ├── id (PK)
-│       ├── project_name
-│       ├── file_path
-│       └── user_id (FK)
-└── mail_nas_db
-    ├── users
-    │   ├── id (PK)
-    │   ├── username
-    │   ├── password
-    │   └── email
-    └── mailboxes
-        ├── id (PK)
-        ├── user_id (FK)
-        ├── mailbox_name
-        ├── messages
-        │   ├── id (PK)
-        │   ├── subject
-        │   ├── body
-        │   ├── sender_id (FK, references users.id)
-        │   ├── recipient_id (FK, references users.id)
-        │   ├── sent_date
-        │   ├── read_status
-        │   └── folder_id (FK)
-        └── folders
-            ├── id (PK)
-            ├── folder_name
-            └── user_id (FK)
-
-mySQL server; 13888
