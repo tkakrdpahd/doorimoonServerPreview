@@ -36,3 +36,57 @@ Perforce Source Control; 1666
 ILS Server; 16800
 Mail NAS Server; 17800
 Internal NAS Server; 18800
+
+mysql_nas/
+├── webserver_db
+│   ├── users
+│   │   ├── id (PK)
+│   │   ├── username
+│   │   ├── password
+│   │   └── email
+│   └── pages
+│       ├── id (PK)
+│       ├── title
+│       ├── content
+│       └── user_id (FK)
+├── internal_db
+│   ├── images
+│   │   ├── id (PK)
+│   │   ├── image_name
+│   │   ├── image_path
+│   │   └── user_id (FK)
+│   ├── videos
+│   │   ├── id (PK)
+│   │   ├── video_name
+│   │   ├── video_path
+│   │   └── user_id (FK)
+│   └── depot
+│       ├── id (PK)
+│       ├── project_name
+│       ├── file_path
+│       └── user_id (FK)
+└── mail_nas_db
+    ├── users
+    │   ├── id (PK)
+    │   ├── username
+    │   ├── password
+    │   └── email
+    └── mailboxes
+        ├── id (PK)
+        ├── user_id (FK)
+        ├── mailbox_name
+        ├── messages
+        │   ├── id (PK)
+        │   ├── subject
+        │   ├── body
+        │   ├── sender_id (FK, references users.id)
+        │   ├── recipient_id (FK, references users.id)
+        │   ├── sent_date
+        │   ├── read_status
+        │   └── folder_id (FK)
+        └── folders
+            ├── id (PK)
+            ├── folder_name
+            └── user_id (FK)
+
+mySQL server; 13888
