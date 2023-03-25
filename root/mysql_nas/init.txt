@@ -3,6 +3,7 @@
         │   ├── users/
         │   └── pages/
         ├── internal_db/
+        │   ├── document/
         │   ├── images/
         │   ├── videos/
         │   └── depot/
