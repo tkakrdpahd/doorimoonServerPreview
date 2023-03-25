@@ -8,7 +8,7 @@ combined_nas RedHat Linux (/root)/ # root domain (doorimoon.com & doorimoon.kr)
     │       └── logs/ # ILS Server; 16800
     │           ├── access.log
     │           └── error.log
-    ├── internal/ # Internal NAS Server & Perforce Source Control; 18800, 1666
+    ├── internal_nas/ # Internal NAS Server & Perforce Source Control; 18800, 1666
     │       ├── images/ # Internal NAS Server; 18800
     │       │   └── user_id/
     │       ├── videos/ # Internal NAS Server; 18800
