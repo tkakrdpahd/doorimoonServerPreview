@@ -6,6 +6,14 @@ combined_nas RedHat Linux (/root)/ # root domain (doorimoon.com & doorimoon.kr)
     │       │   ├── css/ # ILS Server; 16800
     │       │   └── js/ # ILS Server; 16800
     │       └── logs/ # ILS Server; 16800
+    │       │   ├── access.log
+    │       │   └── error.log
+    │       ├── mail_html/ # ILS Server & FTP Server; 16800, 80 & 8080
+    │       │   ├── index.html # FTP Server; 80 & 8080
+    │       │   ├── pages/ # ILS Server; 16800
+    │       │   ├── css/ # ILS Server; 16800
+    │       │   └── js/ # ILS Server; 16800
+    │       └── logs/ # ILS Server; 16800
     │           ├── access.log
     │           └── error.log
     ├── internal_nas/ # Internal NAS Server & Perforce Source Control; 18800, 1666
