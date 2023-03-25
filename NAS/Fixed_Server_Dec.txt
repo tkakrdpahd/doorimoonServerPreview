@@ -1,0 +1,30 @@
+combined_nas/ RedHat Linux
+├── webserver/
+│   ├── public_html/
+│   │   ├── index.html
+│   │   ├── pages/
+│   │   ├── css/
+│   │   └── js/
+│   └── logs/
+│       ├── access.log
+│       └── error.log
+├── internal/
+│   ├── images/
+│   ├── videos/
+│   ├── logs/
+│   └── Depot/
+├── mail_nas/
+│   ├── webmail_server/
+│   │   ├── public_html/
+│   │   └── logs/
+│   └── mail_nas_server/
+│       ├── mailboxes/
+│       ├── logs/
+│       └── backups/
+└── logs/
+    ├── access.log
+    └── error.log
+
+ILS Server; 16800
+Mail NAS Server; 17800
+Internal NAS Server; 18800
