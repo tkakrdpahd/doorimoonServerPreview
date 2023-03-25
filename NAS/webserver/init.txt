@@ -30,7 +30,7 @@ nas/
         └── error.log
 
 FTP Sever; 8080 & 80, index.html
-NAS Server; 16800, others
+ILS Server; 16800, others
 
 nas/
 └── internal/
